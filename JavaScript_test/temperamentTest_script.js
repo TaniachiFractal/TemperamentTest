@@ -48,20 +48,37 @@ function calcResult()
 // Output the result to a field
 function outputResult()
 {
-    var outputStr = inr_extr + '; ' + calm_unst + ' ';
+    var outputStr = 'Экстраверсия: '+inr_extr + '; Нестабильность: ' + calm_unst + ' /// ';
 
-    if (inr_extr == 0 || calm_unst == 0)
-    { outputStr += 'Ваш характер плохо вписывается в систему темпераментов' }
-    else
+    
     if (inr_extr > 0) // Extravert
     {
         if (calm_unst > 0) // Unstable
         {
             outputStr += 'Холерик';
         }
+        else if (calm_unst == 0) // Mid
+        {
+            outputStr += 'Сангвиник или Холерик'
+        }
         else // Calm
         {
             outputStr += 'Сангвиник';
+        }
+    }
+    else if (inr_extr == 0) // Ambivert
+    {
+        if (calm_unst > 0) // Unstable
+        {
+            outputStr += 'Холерик или Меланхолик';
+        }
+        else if (calm_unst == 0) // Mid
+        {
+            outputStr += 'Ваш характер плохо вписывается в систему темпераментов'
+        }
+        else // Calm
+        {
+            outputStr += 'Сангвиник или Флегматик';
         }
     }
     else // Introvert
@@ -69,6 +86,10 @@ function outputResult()
         if (calm_unst > 0) // Unstable
         {
             outputStr += 'Меланхолик';
+        }
+        else if (calm_unst == 0) // Mid
+        {
+            outputStr += 'Флегматик или Меланхолик'
         }
         else // Calm
         {
