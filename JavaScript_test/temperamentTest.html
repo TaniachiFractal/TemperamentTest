@@ -1,0 +1,70 @@
+﻿<html>
+
+<head>
+    <title>
+        Тест на темперамент
+    </title>
+    <script src="temperamentTest_script.js"></script>
+    <link rel="stylesheet" href="styles.css" media="all">
+</head>
+<body>
+
+    <h1>Тест на темперамент </h1>
+    <form >
+        <ol>
+            <li>
+                <!--1-->
+                Вам абсолютно нечего делать. Что вы предпочтёте?
+                <p><input type="radio" name="q1" value="-1" id="q1_1" /> <label>Поспать</label> <!--Intr-->
+                <p><input type="radio" name="q1" value="1" id="q1_2" />  <label>Погулять</label> <!--Extr-->
+            </li>
+            <li>
+                <!--A-->
+                Компьютер вдруг завис и не реагирует ни на какие действия. Вы -
+                <p><input type="radio" name="qA" value="-1" id="qA_1" /> <label>Спокойны</label> <!--Calm-->
+                <p><input type="radio" name="qA" value="1" id="qA_2" />  <label>Нервничаете</label> <!--Unst-->
+            </li>
+            <li>
+                <!--2-->
+                Вы стоите в длинной очереди. Ваши действия?
+                <p>
+                    <select id="q2">
+                        <option value="0">Выбрать ответ...</option>
+                        <option value="-1">Смотреть в телефон</option> <!--Intr-->
+                        <option value="1">Поговорить с кем-то</option> <!--Extr-->
+                    </select>
+            </li>
+            <li>
+                <!--B-->
+                Вам подарили именно ту вещь, о которой Вы очень долго мечтали. Ваша ревкция?
+                <p><input type="radio" name="qB" value="-1" id="qB_1" /> <label>Спокойно улыбнусь</label> <!--Calm-->
+                <p><input type="radio" name="qB" value="1" id="qB_2" />  <label>Очень сильно обрадуюсь</label> <!--Unst-->
+            </li>
+            <li>
+                <!--C-->
+                Вас отвлекают от работы и просят сделать что-то важное. Вы -
+                <p><input type="radio" name="qC" value="-1" id="qC_1" /> <label>Спокойно соглашаетсь</label> <!--Calm-->
+                <p><input type="radio" name="qC" value="1" id="qC_2" />  <label>Злитесь или расстраиваитесь</label> <!--Unst-->
+            </li>
+            <li>
+                <!--3-->
+                Выберите себе развлечения на выходные
+                <p><input type="checkbox" name="q3" value="1" id="q3_1" />  <label>Сходить на мастер-класс по лепке из глины</label> <!--Extr-->
+                <p><input type="checkbox" name="q3" value="-1" id="q3_2" /> <label>Научиться вышивать крестиком по видеоурокам</label> <!--Intr-->
+                <p><input type="checkbox" name="q3" value="-1" id="q3_3" /> <label>Смотреть новый сериал дома</label> <!--Intr-->
+                <p><input type="checkbox" name="q3" value="1" id="q3_4" />  <label>Сходить в кинотеатр</label> <!--Extr-->
+            </li>
+        </ol>
+
+
+        <button type="reset">Очистить</button>
+
+    </form>
+    <button id="btResult" onclick="btResult_Click()">Ввод</button>
+
+    <h2>Результат:</h2>
+    <h3></h3>
+
+</body>
+</html>
+<!---->
